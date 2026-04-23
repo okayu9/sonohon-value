@@ -1,0 +1,68 @@
+<!-- Copyright 2025 Yumeto Inaoka
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License. -->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オプション - その本、バリューにあるよ</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>オプション設定</h1>
+            <p class="subtitle">その本、バリューにあるよ</p>
+        </header>
+
+        <main>
+            <section class="option-section">
+                <h2>表示設定</h2>
+                <div class="option-item">
+                    <input type="checkbox" id="show-out-of-stock" aria-label="在庫がない場合も表示する">
+                    <label for="show-out-of-stock">在庫がない場合も表示する</label>
+                    <p class="option-description">
+                        チェックを入れると、バリューブックスに在庫がない場合でも情報を表示します。
+                    </p>
+                </div>
+
+                <div class="option-item">
+                    <label for="insertion-location">表示位置：</label>
+                    <select id="insertion-location" aria-label="情報の表示位置">
+                        <option value="default">商品説明の下</option>
+                        <option value="between_reviews_description">評価と概要文の間</option>
+                        <option value="below_details">すべての詳細を表示の下</option>
+                    </select>
+                    <p class="option-description">
+                        バリューブックスの情報をAmazonページのどの位置に表示するかを選択します。
+                    </p>
+                </div>
+                <!-- ステータスメッセージ用の領域 -->
+                <!-- JavaScriptで動的に追加されます -->
+            </section>
+        </main>
+
+        <footer>
+            <p id="extension-version">バージョン情報を読み込み中...</p>
+            <p class="copyright">© 2025 その本、バリューにあるよ</p>
+        </footer>
+    </div>
+
+    <script src="options.js" defer></script>
+</body>
+
+</html>

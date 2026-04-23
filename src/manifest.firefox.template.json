@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "その本、バリューにあるよ",
+    "version": "1.3.1",
+    "description": "Amazon.co.jpの書籍ページ上にバリューブックスの在庫状況と価格、バリューブックスへのリンクを挿入します。",
+    "license": "Apache-2.0",
+    "permissions": ["storage"],
+    "host_permissions": [
+        "*://www.valuebooks.jp/search?keyword=*",
+        "*://www.valuebooks.jp/*/bp/*"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.amazon.co.jp/dp/*",
+                "https://www.amazon.co.jp/*/dp/*",
+                "https://www.amazon.co.jp/gp/product/*",
+                "https://www.amazon.co.jp/exec/obidos/ASIN/*",
+                "https://www.amazon.co.jp/o/ASIN/*"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "options_ui": {
+        "page": "options.html"
+    },
+    "icons": {
+        "16": "icon-16.png",
+        "48": "icon-48.png",
+        "128": "icon-128.png"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "__GECKO_ID__",
+            "strict_min_version": "115.0"
+        }
+    }
+}

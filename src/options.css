@@ -1,0 +1,167 @@
+/* Copyright 2025 Yumeto Inaoka
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* 基本スタイル */
+:root {
+    --primary-color: #e67e22;
+    --secondary-color: #2c3e50;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --border-radius: 8px;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ヘッダー */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+h1 {
+    font-size: 28px;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+/* メインコンテンツ */
+main {
+    margin-bottom: 40px;
+}
+
+.option-section {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.option-section h2 {
+    font-size: 20px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.option-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-speed);
+}
+
+.option-item:hover {
+    background-color: #f0f0f0;
+}
+
+.option-item label {
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.option-item input[type="checkbox"] {
+    vertical-align: middle;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.option-description {
+    margin-top: 8px;
+    margin-left: 28px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* ステータスメッセージ */
+#status-message {
+    padding: 10px;
+    border-radius: var(--border-radius);
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #777;
+    font-size: 14px;
+}
+
+#extension-version {
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .option-section {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .option-item {
+        padding: 10px;
+    }
+}
