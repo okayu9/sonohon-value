@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "esModuleInterop": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "types": ["chrome"],
+        "lib": [
+            "DOM",
+            "ESNext"
+        ],
+        "outDir": "./dist/chrome",
+        "rootDir": "./src",
+        "sourceMap": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "src/__tests__"
+    ]
+}
